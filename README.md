@@ -13,7 +13,8 @@ Follow these steps to set up and run the application:
 
 1. Clone the Repository:
 ```bash
-git clone employeeManagement```
+git clone employeeManagement
+```
 
 2. Navigate to the Project Directory:
 ```bash
