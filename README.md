@@ -28,7 +28,7 @@ cd backend
 
 4. Start the Spring Boot Server:
 ```bash
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 The Spring Boot server is now running.
