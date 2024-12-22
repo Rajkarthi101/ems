@@ -1,0 +1,43 @@
+<div class = "regform">
+  <div class="container">
+    <h2>Employee Registration</h2>
+      <form class="example-form"  [formGroup]="registrationForm" (ngSubmit)="handleSubmit()">
+            <mat-form-field class="example-full-width">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="name" value="" formControlName="name"  >              
+              <mat-error style="color:red;" *ngIf="f['name'].touched">
+                Name is required
+                </mat-error>
+            </mat-form-field>
+          <br>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="email" value="" formControlName="email" >
+                <mat-error style="color:red;" *ngIf="f['email'].errors && f['email'].touched && f['email'].errors['required']">
+                    Email is required
+                </mat-error>
+                <mat-error style="color:red;" *ngIf="f['email'].errors && f['email'].errors['pattern'] ">
+                    Email is invalid
+                </mat-error>
+            </mat-form-field>
+        <br>
+            <mat-form-field class="example-full-width">
+              <mat-label>Position</mat-label>
+              <input matInput placeholder="position" value="" formControlName="position"  >              
+              <mat-error style="color:red;" *ngIf="f['position'].touched">
+                position is required
+                </mat-error>
+            </mat-form-field>
+        <br>
+            <mat-form-field class="example-full-width">
+              <mat-label>Salary (Yearly)</mat-label>
+              <input matInput placeholder="salary" value="" formControlName="salary" maxlength="9" >              
+              <mat-error style="color:red;" *ngIf="f['position'].touched">
+                salary is required
+                </mat-error>
+            </mat-form-field>
+        <br>
+          <button mat-raised-button type="submit" [disabled]="!registrationForm.valid" id="submitButton" ><span style="color:black;font-family: 'Times New Roman'">Register</span></button><br>
+      </form>
+  </div>
+</div>

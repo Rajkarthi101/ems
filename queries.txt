@@ -1,0 +1,9 @@
+CREATE SCHEMA ems_live;
+USE ems_live;
+CREATE TABLE employee (
+     emp_id INT AUTO_INCREMENT PRIMARY KEY,
+     emp_name VARCHAR(255) NOT NULL,
+     emp_email VARCHAR(255) UNIQUE NOT NULL,
+     emp_position VARCHAR(100) NOT NULL,
+     emp_salary DECIMAL(10, 2) NOT NULL
+);

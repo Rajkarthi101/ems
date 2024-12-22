@@ -1,3 +1,6 @@
-/**/target
-/**/node_modules
-/**/dist
+backend/target
+backend/.classpath
+frontend/node_modules
+frontend/dist
+frontend/package-lock.json
+

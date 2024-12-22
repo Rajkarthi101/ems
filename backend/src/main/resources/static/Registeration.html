@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Employee Registration</title>  
+    <link rel="stylesheet" href="../styles.css">  
+</head>  
+<script>
+
+</script>
+
+<body>  
+    <div class="container">  
+        <h2>Employee Registration</h2>
+        <form action="submit_registration" method="post">  
+            <label for="fname"><b>Employee Name</b></label>  
+            <input type="text" id="fname" name="firstname" placeholder="Enter First Name" required>  
+  
+            <label for="email"><b>Email</b></label>  
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>  
+  
+            <label for="psw-repeat"><b>Position</b></label>  
+            <input type="position" id="position" name="position" placeholder="Eneter Position" required>  
+  
+            <label for="mobile"><b>Salary</b></label>  
+            <input type="text" id="salary" name="salary" maxlength="10" placeholder="Enter Salary" required>  
+  
+            <!-- <label for="gender"><b>Gender</b></label>  
+            <select id="gender" name="gender" required>  
+                <option value="male">Male</option>  
+                <option value="female">Female</option>  
+                <option value="other">Other</option>  
+            </select>   -->
+  
+            <button type="submit">Register</button>  
+        </form>  
+    </div>  
+</body>  
+</html>  

@@ -1,0 +1,76 @@
+<br>
+<div class="display flex">&nbsp;&nbsp;&nbsp;
+<mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select type="text" [(ngModel)]="optionType">
+    <mat-option value="">Select</mat-option>
+    <mat-option value="1">Name</mat-option>
+    <mat-option value="2">Email</mat-option>
+    <mat-option value="3">Position</mat-option>
+    <mat-option value="4">Salary</mat-option>
+  </mat-select>
+</mat-form-field>&nbsp;&nbsp;&nbsp;
+
+<mat-form-field appearance="fill"> 
+    <mat-label>Search Type</mat-label> 
+    <input matInput type="text" [(ngModel)]="searchBy"> 
+  </mat-form-field>&nbsp;&nbsp;&nbsp;
+
+  <button mat-raised-button color="primary" type="submit" (click)="onSearch()">Submit</button> 
+
+</div>
+<hr>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+      
+      <!-- <input matInput type="text" [(ngModel)]="userName">  -->
+      <ng-container matColumnDef="empName">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.empName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="empEmail">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.empEmail}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="empPosition">
+        <th mat-header-cell *matHeaderCellDef> Position </th>
+        <td mat-cell *matCellDef="let element"> {{element.empPosition}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="empSalary">
+        <th mat-header-cell *matHeaderCellDef> salary </th>
+        <td mat-cell *matCellDef="let element"> {{element.empSalary}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef> Edit </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon (click)="onEdit(element.empId)" style="cursor: pointer;">edit</mat-icon> 
+
+        </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
+        <td mat-cell *matCellDef="let element">
+            <mat-icon (click)="onDelete(element.empId)" style="cursor: pointer;">delete</mat-icon> 
+          </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator> -->
+  </div>
+  
+  
+  <!-- Copyright 2024 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at https://angular.io/license -->
